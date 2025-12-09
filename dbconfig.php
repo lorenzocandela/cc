@@ -1,5 +1,5 @@
 <?php
-if (strpos($_SERVER['HTTP_HOST'], 'http://cc.lorenzoo.it') === 0) {
+if (strpos($_SERVER['HTTP_HOST'], 'cc.lorenzoo.it') === 0) {
     $servername = "localhost";
     $username = "cc_user";
     $password = "lorenzo";
