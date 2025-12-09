@@ -1,0 +1,561 @@
+/* ROOT */
+html, body {
+    padding: 0;
+    overflow-x: clip;
+}
+body {
+    background: var(--light);
+    margin: 0;
+    font-family: 'DM-Regular';
+    color: var(--black);
+}
+.hidden {
+    display: none;
+}
+.tab-section {
+    display: none;
+}
+.tab-section.active-tab {
+    display: block;
+}
+/* SFOCATURA PER I POP UP VARI */
+.blurred {
+    filter: blur(10px);
+    pointer-events: none;
+    transition: filter 0.3s ease-out;
+}
+#INSERIMENTO {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translate(-50%, -45%);
+}
+#INSERIMENTO.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+#REGISTRO {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translate(-50%, -45%);
+}
+#REGISTRO.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.smooth {
+    transition: all 0.3s ease;
+}
+input:focus-visible {
+    outline: none;
+}
+#WARNING_DATE {
+    padding: 20px;
+    margin: 0 auto;
+    opacity: .9;
+    position: fixed;
+    top: 33%;
+}
+:root {
+    --black: #2b2b2b;
+    --gray: #6f767e;
+    --light: #f2f2f2;
+    --white: #fff;
+}
+.limite {
+    background: #eb303066;
+    font-size: 13px;
+    padding: 3px 17px;
+    border-radius: 30px;
+    color: #791515;
+    font-family: 'DM-Medium';
+}
+.ok {
+    background: #59eb3066;
+    font-size: 13px;
+    padding: 3px 17px;
+    border-radius: 30px;
+    color: #247915;
+    font-family: 'DM-Medium';
+}
+.troppi {
+    background: #ebc63066;
+    font-size: 13px;
+    padding: 3px 17px;
+    border-radius: 30px;
+    color: #795815;
+    font-family: 'DM-Medium';
+}
+span.tag-color-div-sez.nero {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #1e1e1e;
+    opacity: .8;
+    border: solid 2px black;
+    border-radius: 30px;
+}
+span.tag-color-div-sez.nudo {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #e87b8d;
+    opacity: .8;
+    border: solid 2px #aa525f;
+    border-radius: 30px;
+}
+span.tag-color-div-sez.beige {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #cccab2;
+    opacity: .8;
+    border: solid 2px #918d64;
+    border-radius: 30px;
+}
+span.tag-color-div-sez.grigio {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #5f5f5f;
+    opacity: .8;
+    border: solid 2px #3e3e3e;
+    border-radius: 30px;
+}
+span.tag-color-div-sez.bianco {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #ffffff;
+    opacity: .8;
+    border: solid 2px #2b2b2b3d;
+    border-radius: 30px;
+}
+span.tag-color-div-sez.blu {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #2c64a8;
+    opacity: .8;
+    border: solid 2px #2d507d;
+    border-radius: 30px;
+}
+span.tag-color-div-sez.rosso {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    padding: 0;
+    background: #a82c2c;
+    opacity: .8;
+    border: solid 2px #7d2d2d;
+    border-radius: 30px;
+}
+/* ---------- */
+
+
+/* HEADER */
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+ul li {
+    margin: 0 15px;
+}
+ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 16px;
+    font-family: 'DM-Regular';
+}
+.active {
+    background-color: #6f767e30;
+    font-family: 'DM-Bold';
+}
+nav {
+    background: #6f767e17;
+    padding: 18px;
+    border-radius: 15px;
+    margin: 30px;
+    margin-bottom: 0;
+}
+.settings-box {
+    display: grid;
+    right: 0;
+    float: right;
+    margin-right: 60px;
+    position: absolute;
+    opacity: .3;
+}
+/* ---------- */
+
+
+/* TAGS REGISTRAZIONE/INSERT */
+#first-section {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.sales {
+    background: #e6e7e7;
+    border-radius: 30px;
+    margin: 20px 30px;
+    padding: 10px 30px;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+}
+.sales:nth-child(1) {
+    margin-right: 7.5px;
+}
+.sales:nth-child(2) {
+    margin-left: 7.5px;
+}
+.sales-title {
+    font-family: 'DM-Medium';
+    font-size: 16px;
+    color: var(--black);
+}
+.product-search {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'DM-Regular';
+}
+.sales-title b {
+    margin-left: 4px;
+    font-family: 'DM-Bold';
+    padding-right: 7px;
+    font-weight: unset !important;
+}
+.title-div-sez {
+    display: flex;
+    align-items: center;
+}
+span.title-div-sez img {
+    margin-right: 10px;
+    width: 20px;
+    opacity: .5;
+}
+/* ---------- */
+
+
+/* DASH TOTAL PRODOTTI */
+.row {
+    display: flex;
+    margin: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.img-box img {
+    width: 100%;
+    border-radius: 15px;
+}
+.box-article {
+    margin: 5px;
+}
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tag-dispo {
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 5px;
+}
+.tag-colore {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.title-article {
+    font-family: 'DM-Medium';
+    font-size: 16px;
+    color: var(--black);
+}
+.article-price {
+    font-family: 'DM-Regular';
+    font-size: 16px;
+    color: var(--black);
+}
+.info-box {
+    opacity: .5;
+    font-family: 'DM-Regular';
+    font-size: 15px;
+    color: var(--black);
+}
+/* ---------- */
+
+
+
+/* LOAD BTN DASH TOTAL PRODOTTI & ++ */
+#load-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 90px;
+}
+#loadmore {
+    background: #e6e7e7;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'DM-Medium';
+    font-size: 15px;
+    padding: 5px 10px;
+    color: var(--black) !important;
+}
+#carica {
+    margin-right: 5px;
+    width: 15px;
+}
+#menudrop {
+    width: 24px;
+    opacity: .8;
+}
+/* ---------- */
+
+
+/* DASHBOARD INSERT & REG */
+#INSERIMENTO, #REGISTRO {
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--light);
+    color: var(--black);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    border-radius: 40px;
+    width: 600px;
+}
+#REGISTRO {
+    width: 300px;
+}
+#INSERIMENTO img, #REGISTRO img {
+    opacity: .3;
+}
+#INSERIMENTO label, #REGISTRO label {
+    font-size: 12px;
+    font-family: 'DM-MEdium';
+    text-transform: uppercase;
+    margin-bottom: -2px;
+    background: #6f767e3b;
+}
+#INSERIMENTO form, #REGISTRO form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    width: fit-content;
+    border-radius: 30px;
+    background: #00000008;
+    margin: -20px;
+    margin-top: 20px;
+}
+#REGISTRO form {
+    margin: -20px;
+    margin-top: 20px;
+    width: -webkit-fill-available;
+    padding: 40px 50px;
+}
+#INSERIMENTO form input[type="text"], #INSERIMENTO form input[type="number"], #REGISTRO form input[type="text"], #REGISTRO form input[type="number"] {
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    background: #2b2b2b05;
+    border: solid 1.5px #2b2b2b40;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 4px;
+    font-family: 'DM-Regular';
+    outline: none;
+}
+#INSERIMENTO button, #REGISTRO button {
+    border: solid 2px #c9c9c9;
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: 'DM-Regular';
+    background: #d4d5d7;
+    color: #2b2b2b6b;
+    margin-top: 20px;
+    font-weight: unset !important;
+    width: 96.5%;
+    margin-bottom: -27px;
+    border-radius: 22px;
+    height: 60px;
+    font-size: 26px;
+}
+#INSERIMENTO select, #REGISTRO select {
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    background: #2b2b2b05;
+    border: solid 1.5px #2b2b2b40;
+    border-radius: 4px;
+    padding: 5px !important;
+    margin-top: 4px;
+    outline: none;
+    font-family: 'DM-Regular';
+    color: var(--black) !important;
+}
+#INSERIMENTO form .group, #REGISTRO form .group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px;
+    width: fit-content;
+}
+#REGISTRO form .group {
+    padding: 0;
+}
+.form-group {
+    margin: 0 5px;
+    text-align: left;
+}
+/* ---------- */
+
+
+/* ANAYLTICS */
+.box-sales {
+    width: 100%;
+    background: #e6e7e7;
+    margin: 5px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.box-sales:nth-child(1) {
+    margin-left: 0;
+}
+.box-sales:nth-child(3) {
+    margin-right: 0;
+}
+span.value {
+    font-size: 35px;
+    font-family: 'DM-Medium';
+}
+span.title {
+    font-size: 16px;
+    font-family: 'DM-Regular';
+    opacity: .5;
+}
+.content {
+    margin-top: 5px;
+}
+.box-sales canvas {
+    width: 100% !important;
+    max-height: 80px;
+    margin-top: 10px;
+}
+
+.content-article img {
+    width: 100px;
+    border-radius: 10px;
+}
+.content-article:nth-child(2) {
+    margin-top: 15px;
+}
+.content-article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title-box-top-sales {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.content-article .img-box {
+    margin-right: 10px;
+}
+/* ---------- */
+
+
+/* PRODOTTI */
+#PRODOTTI {
+    margin: 30px;
+    margin-top: 0;
+}
+#PRODOTTI table {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background: #e6e7e7;
+    font-family: 'DM-Regular';
+}
+#PRODOTTI table tr, #PRODOTTI table td, #PRODOTTI table th {
+    border: none;
+}
+#PRODOTTI td {
+    border-top: solid 1px #00000021 !important;
+}
+#PRODOTTI table tbody tr {
+    transition: transform 0.3s ease;
+}
+#PRODOTTI tr {
+    height: 60px;
+    text-align: center;
+}
+#PRODOTTI th {
+    opacity: .5;
+    font-family: 'DM-Regular';
+}
+.action-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 100px;
+    border-radius: 4px;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'DM-Regular';
+}
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+.action-dropdown.active .dropdown-menu {
+    display: block;
+}
+.th-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sort-icon {
+    margin-top: 5px;
+    cursor: pointer;
+}

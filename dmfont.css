@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'DM-Regular';
+    src: url('./fonts/DM_Sans/DMSans-Regular.ttf');
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DM-Medium';
+    src: url('./fonts/DM_Sans/DMSans-Medium.ttf');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM-Bold';
+    src: url('./fonts/DM_Sans/DMSans-Bold.ttf');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM-ExtraBold';
+    src: url('./fonts/DM_Sans/DMSans-ExtraBold.ttf');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM-Black';
+    src: url('./fonts/DM_Sans/DMSans-Black.ttf');
+    font-display: swap;
+    font-style: normal;
+}
