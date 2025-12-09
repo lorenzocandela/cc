@@ -1,9 +1,9 @@
 <?php
-if (strpos($_SERVER['HTTP_HOST'], 'lorenzocandela.netsons.org') === 0) {
+if (strpos($_SERVER['HTTP_HOST'], 'http://cc.lorenzoo.it') === 0) {
     $servername = "localhost";
-    $username = "droraxjt_wp82";
-    $password = "Ciaociam23.01";
-    $dbname = "droraxjt_wp82";
+    $username = "cc_user";
+    $password = "lorenzo";
+    $dbname = "cc";
 } else {
     $servername = "localhost";
     $username = "root";

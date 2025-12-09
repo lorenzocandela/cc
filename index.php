@@ -110,7 +110,7 @@
                 .then(text => {
                     const [status, message] = text.split("|");
                     if (status === "OK") {
-                        if (confirm(message || "VENDITA REGISTRATA ✅! Vuoi inserirne un altro?")) {
+                        if (confirm(message || "VENDITA REGISTRATA ✅! Vuoi registrare un'altra?")) {
                             form.reset();
                         } else {
                             document.getElementById("REGISTRO").classList.remove("show");
